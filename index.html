@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <title>Welcome to MAPA!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbtron">
+            <h1 class="display-2">MAPA</h1>
+            <br>
+            <h1 class="display-4">The L.A. Metro Web App On Demand</h1>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!--Adding the Train Schedule table -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              Train Schedule
+            </div class="card-body">
+            <div>
+              <table class="table table-hover" id="trainData">
+                <thead>
+                  <tr>
+                    <th>Train Line</th>
+                    <th>Destination</th>
+                    <th>Frequency</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody id="trainData">
+                 
+                </tbody>
+              </table>
+            </div>  
+          </div>  
+        </div>
+      </div>
+      <br>
+      <!--Adding the input box for the trains -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label class="form-control-label" for="formGroupExampleInput">Train</label>
+                  <input type="text" class="form-control" id="train-input" placeholder="Enter Train Line">
+                </div>
+                <div class="form-group">
+                  <label class="form-control-label" for="formGroupExampleInput2">Destination</label>
+                  <input type="text" class="form-control" id="dest-input" placeholder="Enter Destination">
+                </div>
+                <div class="form-group">
+                  <label class="form-control-label" for="formGroupExampleInput">First Train Time</label>
+                  <input type="text" class="form-control" id="time-input" placeholder="Enter in HH:mm">
+                </div>
+                <div class="form-group">
+                  <label class="form-control-label" for="formGroupExampleInput2">Frequency</label>
+                  <input type="text" class="form-control" id="freq-input" placeholder="Enter in Minutes">
+                </div>
+                <button type="submit" class="btn btn-primary" id="add-input">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/train.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>
